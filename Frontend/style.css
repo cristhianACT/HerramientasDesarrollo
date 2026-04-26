@@ -1,0 +1,94 @@
+:root {
+    --bg: #1a1a1a;
+    --card: #242424;
+    --primary: #3b82f6;
+    --text: #e5e7eb;
+    --text-muted: #9ca3af;
+    --border: #333;
+}
+
+body {
+    font-family: 'Inter', system-ui, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 700px;
+}
+
+header { text-align: center; margin-bottom: 40px; }
+h1 { font-size: 2rem; margin-bottom: 10px; }
+p { color: var(--text-muted); }
+
+.card {
+    background: var(--card);
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    margin-bottom: 20px;
+}
+
+.form-group { margin-bottom: 20px; }
+label { display: block; font-size: 0.9rem; margin-bottom: 8px; color: var(--text-muted); }
+
+input, select {
+    width: 100%;
+    padding: 12px;
+    background: #111;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    color: white;
+    font-size: 1rem;
+}
+
+.row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+
+button {
+    width: 100%;
+    padding: 14px;
+    background: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+button:hover { opacity: 0.9; }
+button:disabled { background: #444; cursor: not-allowed; }
+
+.status-info {
+    margin-top: 20px;
+    padding: 15px;
+    background: #1e293b;
+    border-radius: 8px;
+    font-size: 0.9rem;
+}
+
+.result-section { margin-top: 30px; }
+.result-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; }
+
+.report-box {
+    background: #111;
+    padding: 25px;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    white-space: pre-wrap;
+    line-height: 1.6;
+}
+
+.actions { display: flex; gap: 10px; }
+.btn-secondary { padding: 8px 16px; background: #333; font-size: 0.85rem; width: auto; }
+
+.hidden { display: none; }
+.loader { border: 2px solid #555; border-top: 2px solid #fff; border-radius: 50%; width: 16px; height: 16px; animation: spin 1s linear infinite; display: inline-block; margin-left: 10px; }
+@keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+
+@media (max-width: 500px) { .row { grid-template-columns: 1fr; } }
